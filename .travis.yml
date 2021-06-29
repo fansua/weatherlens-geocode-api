@@ -18,7 +18,7 @@ before_script:
 script:
   - docker --version  # prints theversion for loggin 
   - docker build -t weatherlens-geocode-api . 
-  - docker tag weatherlens-geocode-api fansua/weatherlens-geocode-apii:latest
+  - docker tag weatherlens-geocode-api fansua/weatherlens-geocode-api:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
